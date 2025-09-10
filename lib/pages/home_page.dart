@@ -6,6 +6,7 @@ import 'package:image_picker/image_picker.dart';
 import '../widgets/gradient_background.dart';
 import '../widgets/chat_message.dart';
 import 'settings_page.dart';
+import 'work_list_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -87,7 +88,7 @@ class _HomePageState extends State<HomePage> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => const MyWorkPage(),
+                                builder: (context) => const WorkListPage(),
                               ),
                             );
                           },
