@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'my_work_page.dart';
 import 'my_work_page2.dart';
 import 'my_work_page3.dart';
+import 'work_list_page4.dart';
+import 'my_work_page5.dart';
 
 class WorkListPage extends StatelessWidget {
   const WorkListPage({super.key});
@@ -12,6 +14,34 @@ class WorkListPage extends StatelessWidget {
       appBar: AppBar(title: const Text('Daftar Work')),
       body: ListView(
         children: [
+          ListTile(
+            leading: const Icon(Icons.assignment, color: Colors.deepOrange),
+            title: const Text('Tugas Modul 4'),
+            subtitle: const Text('Halaman tugas khusus Modul 4'),
+            trailing: const Icon(Icons.arrow_forward_ios, size: 16),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const MyWorkPage5(),
+                ),
+              );
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.book, color: Colors.orange),
+            title: const Text('Modul 4'),
+            subtitle: const Text('Tugas dan latihan modul 4'),
+            trailing: const Icon(Icons.arrow_forward_ios, size: 16),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const WorkListPage4(),
+                ),
+              );
+            },
+          ),
           ListTile(
             leading: const Icon(Icons.book, color: Colors.deepPurple),
             title: const Text('Modul 2'),
