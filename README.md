@@ -1,16 +1,9 @@
-# praktikum_mobile
+#### Hi 👋, I'm Naldo. 
+##### Saya Mahasiswa Teknik Informatika.
 
-A new Flutter project.
+💻Saat ini saya sedang belajar pemrograman mobile:
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+| No  | Tgl  | Praktikum ke  | Topik  | Modul | Laporan |
+| ------------ | ------------ | ------------ | ------------ | ------------ | ------------ | 
+|  1 | 03-09-2025  | 01  | Pengenalan Mobile Programming dan Setup Lingkungan  | [Modul 01](https://docs.google.com/document/d/1aVRJTNYvTpJY1oBlYQX1pxzbSQFfJ98n/edit?usp=sharing&ouid=104944616880503288967&rtpof=true&sd=true "Modul 01") | [laporan Praktikum](https://drive.google.com/file/d/1_JFMhFh7mBU-3Xn7Imv_BcdBs_BIDJ6g/view?usp=sharing) |
+|  1 | 03-09-2025  | 02  | Pengenalan Mobile Programming dan Setup Lingkungan  | [Modul 02](https://docs.google.com/document/d/1bAyuU6jrKHtkA4Xj5qt7JtetDfKI22JQ/edit?usp=sharing&ouid=104944616880503288967&rtpof=true&sd=true "Modul 02")| [Laporan Praktikum](https://docs.google.com/document/d/1wie0WZLUFwCLTRCIop5fmH-7mAGyVkCN/edit?usp=sharing&ouid=104944616880503288967&rtpof=true&sd=true "Template laporan")|
