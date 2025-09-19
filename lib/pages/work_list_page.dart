@@ -9,6 +9,8 @@ import 'my_work_page7.dart';
 import 'my_work_page8.dart';
 import 'my_work_page9.dart';
 import 'my_work_page10.dart';
+import 'my_work_page11.dart';
+import 'my_work_page12.dart';
 
 class WorkListPage extends StatelessWidget {
   const WorkListPage({super.key});
@@ -43,6 +45,32 @@ class WorkListPage extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) => const MyWorkPage7(),
+                ),
+              );
+            },
+          ),ListTile(
+            leading: const Icon(Icons.assignment, color: Colors.brown),
+            title: const Text('Modul 5 - Widget SizedBox'),
+            subtitle: const Text('Tugas dan latihan modul 6'),
+            trailing: const Icon(Icons.arrow_forward_ios, size: 16),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const MyWorkPage11(),
+                ),
+              );
+            },
+          ),ListTile(
+            leading: const Icon(Icons.assignment, color: Colors.brown),
+            title: const Text('Tugas Modul 5 - Pemutar Musik'),
+            subtitle: const Text('Tugas dan latihan modul 6'),
+            trailing: const Icon(Icons.arrow_forward_ios, size: 16),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const MyWorkPage12(),
                 ),
               );
             },
