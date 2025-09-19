@@ -7,6 +7,8 @@ import 'my_work_page5.dart';
 import 'my_work_page6.dart';
 import 'my_work_page7.dart';
 import 'my_work_page8.dart';
+import 'my_work_page9.dart';
+import 'my_work_page10.dart';
 
 class WorkListPage extends StatelessWidget {
   const WorkListPage({super.key});
@@ -19,8 +21,8 @@ class WorkListPage extends StatelessWidget {
         children: [
           ListTile(
             leading: const Icon(Icons.assignment, color: Colors.purple),
-            title: const Text('Modul 5 - GridView'),
-            subtitle: const Text('Tugas dan latihan modul 5'),
+            title: const Text('Modul 6 - GridView'),
+            subtitle: const Text('Tugas dan latihan modul 6'),
             trailing: const Icon(Icons.arrow_forward_ios, size: 16),
             onTap: () {
               Navigator.push(
@@ -33,8 +35,8 @@ class WorkListPage extends StatelessWidget {
           ),
           ListTile(
             leading: const Icon(Icons.assignment, color: Colors.brown),
-            title: const Text('Modul 5 - ListView'),
-            subtitle: const Text('Tugas dan latihan modul 5'),
+            title: const Text('Modul 6 - ListView'),
+            subtitle: const Text('Tugas dan latihan modul 6'),
             trailing: const Icon(Icons.arrow_forward_ios, size: 16),
             onTap: () {
               Navigator.push(
@@ -46,8 +48,34 @@ class WorkListPage extends StatelessWidget {
             },
           ),ListTile(
             leading: const Icon(Icons.assignment, color: Colors.brown),
-            title: const Text('Modul 5 - Grid View Builder'),
-            subtitle: const Text('Tugas dan latihan modul 5'),
+            title: const Text('Modul 6 - List View Builder'),
+            subtitle: const Text('Tugas dan latihan modul 6'),
+            trailing: const Icon(Icons.arrow_forward_ios, size: 16),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const MyWorkPage9(),
+                ),
+              );
+            },
+          ),ListTile(
+            leading: const Icon(Icons.assignment, color: Colors.brown),
+            title: const Text('Modul 6 - Tugas'),
+            subtitle: const Text('Tugas dan latihan modul 6'),
+            trailing: const Icon(Icons.arrow_forward_ios, size: 16),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const MyWorkPage10(),
+                ),
+              );
+            },
+          ),ListTile(
+            leading: const Icon(Icons.assignment, color: Colors.brown),
+            title: const Text('Modul 6 - Grid View Builder'),
+            subtitle: const Text('Tugas dan latihan modul 6'),
             trailing: const Icon(Icons.arrow_forward_ios, size: 16),
             onTap: () {
               Navigator.push(
