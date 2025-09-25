@@ -12,5 +12,7 @@
 |  5 | 17-09-2025  | 03  | Widget SizedBox, Spacer, dan Card | [Modul 05](https://drive.google.com/file/d/1nAW0u9RKz2rN-XhK7vYANkFEhUKQCII7/view?usp=drive_link "Modul 05") | [Laporan Praktikum](https://drive.google.com/file/d/1ZijH87UG2zzXJS4qKHws0MmHeGgeNzoy/view?usp=drive_link "Template laporan") |
 |  6 | 17-09-2025  | 03  | Widget GridView, ListView, GridView.builder, dan ListView.builder | [Modul 06](https://drive.google.com/file/d/1dd6YS4y6AGqGiWVnT4IGmAcWkzjsfe1i/view?usp=drive_link "Modul 06") | [Laporan Praktikum](https://drive.google.com/file/d/1obeRX8wU2d_M_vvXAyT5S6KrZDbHPzQx/view?usp=drive_link "Template laporan") |
 |  7 | 17-09-2025  | 03  | Tugas | [Tugas Modul 06](https://drive.google.com/file/d/1sreBI2-LXsdYV_0AyCKFoQlytMjm8aHS/view?usp=drive_link "Tugas Modul 06") | [Laporan Praktikum](https://drive.google.com/file/d/1wMXjJpYdCs7y3cr9pYYgpdU4p5KmBCWG/view?usp=drive_link "Template laporan") |
-|  8 | --  | 8  | None | [Modul 8](# "Demo 8") | [Laporan Praktikum](# "Template laporan") |
-|  9 | --  | 9  | None | [Modul 9](# "Demo 9") | [Laporan Praktikum](# "Template laporan") |
+|  8 | 24-09-2025  | 04  | Navigasi antar halaman menggunakan MaterialPageRoute dan NamedRoute | [Modul 7](https://drive.google.com/file/d/1-JsuKBh_pONOR1dR69elFMbroPEyGpnB/view?usp=drive_link "Demo 7") | [Laporan Praktikum](https://drive.google.com/file/d/17rATNjQ1EcnNrDLoj1lKu6N5S3B7mofl/view?usp=drive_link "Template laporan") |
+|  9 | 24-09-2025  | 04  | Navigasi antar halaman dengan mengirimkan argumen menggunakan NamedRoute | [Modul 8](https://drive.google.com/file/d/1Sd6_tv5G91WGoYUDhoK8JLmPgx7fgXWU/view?usp=drive_link "Demo 8") | [Laporan Praktikum](https://drive.google.com/file/d/1C9bnEQGpsBaHKB6Tu78fy_GWJAuDe6Tt/view?usp=drive_link "Template laporan") |
+|  10 | --  | 04  | None | [Modul 8](# "Demo 8") | [Laporan Praktikum](# "Template laporan") |
+| 11 | --  | 04  | None | [Modul 9](# "Demo 9") | [Laporan Praktikum](# "Template laporan") |
