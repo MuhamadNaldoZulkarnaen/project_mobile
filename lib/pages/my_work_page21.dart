@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:geolocator/geolocator.dart';
 
 class MyWorkPage21 extends StatelessWidget {
   const MyWorkPage21({super.key});
@@ -23,6 +24,8 @@ class _MapSampleState extends State<MapSample>
     with AutomaticKeepAliveClientMixin<MapSample> {
   final Completer<GoogleMapController> _controller = Completer();
   bool _cameraBusy = false;
+  bool _myLocationEnabled = false;
+  String? _error;
 
   static const CameraPosition _kGooglePlex = CameraPosition(
     target: LatLng(37.42796133580664, -122.085749655962),
@@ -46,27 +49,99 @@ class _MapSampleState extends State<MapSample>
       // Wrap the GoogleMap in a RepaintBoundary to reduce unnecessary repaints
       // and temporarily disable myLocation to reduce platform view overhead
       body: RepaintBoundary(
-        child: GoogleMap(
-          mapType: MapType.normal,
-          initialCameraPosition: _kGooglePlex,
-          onMapCreated: (GoogleMapController controller) {
-            // Guard against completing the completer more than once if the
-            // widget is recreated rapidly.
-            if (!_controller.isCompleted) {
-              _controller.complete(controller);
-            }
-          },
-          // disabled temporarily to reduce SurfaceTexture traffic while
-          // diagnosing frequent BufferQueueProducer drops
-          myLocationEnabled: false,
-          myLocationButtonEnabled: false,
+        child: Stack(
+          children: [
+            GoogleMap(
+              mapType: MapType.normal,
+              initialCameraPosition: _kGooglePlex,
+              onMapCreated: (GoogleMapController controller) {
+                if (!_controller.isCompleted) {
+                  _controller.complete(controller);
+                }
+              },
+              myLocationEnabled: _myLocationEnabled,
+              myLocationButtonEnabled: _myLocationEnabled,
+            ),
+            if (_error != null)
+              Positioned(
+                top: 16,
+                left: 16,
+                right: 16,
+                child: Material(
+                  color: Colors.red.shade700,
+                  borderRadius: BorderRadius.circular(8),
+                  child: Padding(
+                    padding: const EdgeInsets.all(12.0),
+                    child: Text(
+                      _error!,
+                      style: const TextStyle(color: Colors.white),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ),
+              ),
+          ],
         ),
       ),
-      floatingActionButton: FloatingActionButton.extended(
-        onPressed: _goToTheLake,
-        label: const Text('To the lake'),
-        icon: const Icon(Icons.directions_boat),
+      floatingActionButton: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.end,
+        children: [
+          FloatingActionButton.extended(
+            onPressed: _showMyLocation,
+            label: const Text('Tampilkan Lokasi Saya'),
+            icon: const Icon(Icons.my_location),
+          ),
+          const SizedBox(height: 12),
+          FloatingActionButton.extended(
+            onPressed: _goToTheLake,
+            label: const Text('To the lake'),
+            icon: const Icon(Icons.directions_boat),
+          ),
+        ],
       ),
+      Future<void> _showMyLocation() async {
+        setState(() {
+          _error = null;
+        });
+        try {
+          bool serviceEnabled = await Geolocator.isLocationServiceEnabled();
+          if (!serviceEnabled) {
+            setState(() {
+              _error = 'Layanan lokasi tidak aktif. Aktifkan GPS/location di pengaturan.';
+            });
+            return;
+          }
+          LocationPermission permission = await Geolocator.checkPermission();
+          if (permission == LocationPermission.denied) {
+            permission = await Geolocator.requestPermission();
+            if (permission == LocationPermission.denied) {
+              setState(() {
+                _error = 'Izin lokasi ditolak.';
+              });
+              return;
+            }
+          }
+          if (permission == LocationPermission.deniedForever) {
+            setState(() {
+              _error = 'Izin lokasi ditolak permanen. Buka pengaturan aplikasi untuk mengaktifkan.';
+            });
+            return;
+          }
+          final pos = await Geolocator.getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
+          setState(() {
+            _myLocationEnabled = true;
+          });
+          final GoogleMapController controller = await _controller.future;
+          await controller.animateCamera(CameraUpdate.newLatLng(
+            LatLng(pos.latitude, pos.longitude),
+          ));
+        } catch (e) {
+          setState(() {
+            _error = 'Gagal mendapatkan lokasi: $e';
+          });
+        }
+      }
     );
   }
 
