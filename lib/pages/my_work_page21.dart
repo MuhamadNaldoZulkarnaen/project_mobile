@@ -100,6 +100,9 @@ class _MapSampleState extends State<MapSample>
           ),
         ],
       ),
+     );
+    }
+
       Future<void> _showMyLocation() async {
         setState(() {
           _error = null;
@@ -142,8 +145,6 @@ class _MapSampleState extends State<MapSample>
           });
         }
       }
-    );
-  }
 
   Future<void> _goToTheLake() async {
     if (!_controller.isCompleted) return;

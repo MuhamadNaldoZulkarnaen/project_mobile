@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <!-- Google Maps API key. Only needed if you use google_maps_flutter. -->
-    <string name="google_maps_key">AIzaSyDG_rpK9-LLwhhQ3MSnd4vv4twTfXvXCA0</string>
-</resources>
