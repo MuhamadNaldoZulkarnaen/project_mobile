@@ -99,7 +99,7 @@ class _MyWorkPage10State extends State<MyWorkPage10> {
         throw Exception('Gagal load data dari FreeToGame API');
       }
     } catch (e) {
-      print('Error: $e');
+      debugPrint('Error: $e');
       setState(() {
         _error = 'Terjadi kesalahan: $e';
         _isLoading = false;

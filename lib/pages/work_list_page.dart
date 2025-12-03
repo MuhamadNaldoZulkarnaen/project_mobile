@@ -11,6 +11,16 @@ import 'my_work_page9.dart';
 import 'my_work_page10.dart';
 import 'my_work_page11.dart';
 import 'my_work_page12.dart';
+import 'my_work_page13.dart';
+import 'my_work_page14.dart';
+import 'my_work_page15.dart';
+import 'my_work_page16.dart';
+import 'my_work_page17.dart';
+import 'my_work_page18.dart';
+import 'my_work_page19.dart';
+import 'my_work_page20.dart';
+import 'my_work_page21.dart';
+
 
 class WorkListPage extends StatelessWidget {
   const WorkListPage({super.key});
@@ -45,6 +55,123 @@ class WorkListPage extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) => const MyWorkPage7(),
+                ),
+              );
+            },
+          ),ListTile(
+            leading: const Icon(Icons.assignment, color: Colors.brown),
+            title: const Text('Modul 12 - ListView'),
+            subtitle: const Text('Tugas dan latihan modul 12'),
+            trailing: const Icon(Icons.arrow_forward_ios, size: 16),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const MyWorkPage21(),
+                ),
+              );
+            },
+          ),ListTile(
+            leading: const Icon(Icons.assignment, color: Colors.brown),
+            title: const Text('Modul 9 - Stateful Widget'),
+            subtitle: const Text('Tugas dan latihan modul 9'),
+            trailing: const Icon(Icons.arrow_forward_ios, size: 16),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const MyWorkPage17(),
+                ),
+              );
+            },
+          ),ListTile(
+            leading: const Icon(Icons.assignment, color: Colors.brown),
+            title: const Text('Latihan 9 - Stateful Widget'),
+            subtitle: const Text('Project 9'),
+            trailing: const Icon(Icons.arrow_forward_ios, size: 16),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const MyWorkPage18(),
+                ),
+              );
+            },
+          ),ListTile(
+            leading: const Icon(Icons.assignment, color: Colors.brown),
+            title: const Text('Tugas 10 - JSON Serialization'),
+            subtitle: const Text('Project 10'),
+            trailing: const Icon(Icons.arrow_forward_ios, size: 16),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const MyWorkPage19(),
+                ),
+              );
+            },
+          ),ListTile(
+            leading: const Icon(Icons.assignment, color: Colors.brown),
+            title: const Text('Modul 11 -  Manajemen State dengan GetX'),
+            subtitle: const Text('Tugas 11'),
+            trailing: const Icon(Icons.arrow_forward_ios, size: 16),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const MyWorkPage20(),
+                ),
+              );
+            },
+          ),ListTile(
+            leading: const Icon(Icons.assignment, color: Colors.brown),
+            title: const Text('Modul 7'),
+            subtitle: const Text('Tugas dan latihan modul'),
+            trailing: const Icon(Icons.arrow_forward_ios, size: 16),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const MyWorkPage13(),
+                ),
+              );
+            },
+          ),ListTile(
+            leading: const Icon(Icons.assignment, color: Colors.brown),
+            title: const Text('Modul 7 - Tugas'),
+            subtitle: const Text('Tugas dan latihan modul'),
+            trailing: const Icon(Icons.arrow_forward_ios, size: 16),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const MyWorkPage14(),
+                ),
+              );
+            },
+          ),ListTile(
+            leading: const Icon(Icons.assignment, color: Colors.brown),
+            title: const Text('Modul 8'),
+            subtitle: const Text('Tugas dan latihan modul'),
+            trailing: const Icon(Icons.arrow_forward_ios, size: 16),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const MyWorkPage15(),
+                ),
+              );
+            },
+          ),ListTile(
+            leading: const Icon(Icons.assignment, color: Colors.brown),
+            title: const Text('Modul 8 - Tugas'),
+            subtitle: const Text('Tugas dan latihan modul'),
+            trailing: const Icon(Icons.arrow_forward_ios, size: 16),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const MyWorkPage16(),
                 ),
               );
             },

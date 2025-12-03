@@ -7,10 +7,10 @@ class MyWorkPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('My Work')),
-      body: Center(
+      body: const Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,
-          children: const [
+          children: [
             KotakBiruJempol(),
             SizedBox(height: 16),
             KotakBiruJempol(),
@@ -35,7 +35,7 @@ class KotakBiruJempol extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.blue,
         borderRadius: BorderRadius.circular(16),
-        boxShadow: [
+        boxShadow: const [
           BoxShadow(
             color: Colors.black12,
             blurRadius: 4,

@@ -36,11 +36,11 @@ class MyWorkPage12 extends StatelessWidget {
                 ),
                 const SizedBox(width: 16),
                 // Info lagu
-                Expanded(
+                const Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisSize: MainAxisSize.min,
-                    children: const [
+                    children: [
                       Text(
                         'Di sini ada judul lagu',
                         style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.white),

@@ -48,7 +48,7 @@ class ProfileCard extends StatelessWidget {
                   child: InkWell(
                     onTap: onChangePhoto,
                     child: Container(
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         color: Colors.white,
                         shape: BoxShape.circle,
                         boxShadow: [

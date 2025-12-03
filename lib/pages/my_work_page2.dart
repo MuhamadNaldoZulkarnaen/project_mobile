@@ -7,13 +7,13 @@ class MyWorkPage2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Alignment')),
-      body: Center(
+      body: const Center(
         // Aktifkan hanya satu child di bawah ini untuk eksperimen layout:
         child: Row(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: const [
+          children: [
             KotakBiruJempolKecil(),
             SizedBox(width: 20),
             KotakBiruJempol(),

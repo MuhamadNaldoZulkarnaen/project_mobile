@@ -1,4 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Location permissions required for geolocation -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <application
         android:label="praktikum_mobile"
         android:name="${applicationName}"
@@ -26,8 +29,14 @@
         </activity>
         <!-- Don't delete the meta-data below.
              This is used by the Flutter tool to generate GeneratedPluginRegistrant.java -->
+        <!-- If you switch to Google Maps (google_maps_flutter), set your API key in resources
+             and reference it here as shown. For flutter_map (OpenStreetMap) this is not required. -->
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+        <!-- Google Maps API key (used by google_maps_flutter) -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key"/>
     </application>
 </manifest>

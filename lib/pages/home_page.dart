@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../widgets/profile_card.dart';
-import 'my_work_page.dart';
+// import 'my_work_page.dart'; // removed - unused import
 import 'dart:io';
 import 'package:image_picker/image_picker.dart';
 import '../widgets/gradient_background.dart';
@@ -43,7 +43,7 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    final List<Widget> _pages = <Widget>[
+  final List<Widget> pages = <Widget>[
       SingleChildScrollView(
         child: Column(
           children: [
@@ -52,7 +52,7 @@ class _HomePageState extends State<HomePage> {
               subtitle: "Belajar Flutter Dasar",
               avatarImage: _profileImagePath != null
                   ? FileImage(File(_profileImagePath!))
-                  : NetworkImage('https://ui-avatars.com/api/?name=Muhamad+Naldo+Zulkarnaen') as ImageProvider,
+                  : const NetworkImage('https://ui-avatars.com/api/?name=Muhamad+Naldo+Zulkarnaen') as ImageProvider,
               onEdit: () {
                 setState(() {
                   _selectedIndex = 2; // Pindah ke tab Pengaturan
@@ -104,7 +104,7 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       // Contoh halaman chat
-      Column(
+      const Column(
         children: [
           ChatMessage(
             sender: "Naldo",
@@ -136,7 +136,7 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       body: GradientBackground(
-        child: Center(child: _pages[_selectedIndex]),
+        child: Center(child: pages[_selectedIndex]),
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,

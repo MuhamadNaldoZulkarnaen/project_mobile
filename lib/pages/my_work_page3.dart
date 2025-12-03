@@ -10,25 +10,25 @@ class MyWorkPage3 extends StatelessWidget {
       body: Container(
         color: const Color(0xFFFFF1F7),
         width: double.infinity,
-        child: Column(
+        child: const Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const SizedBox(height: 32),
-            const Text(
+            SizedBox(height: 32),
+            Text(
               'Malang',
               style: TextStyle(fontSize: 40, color: Colors.black87),
             ),
-            const SizedBox(height: 16),
-            const Text(
+            SizedBox(height: 16),
+            Text(
               '25°',
               style: TextStyle(fontSize: 100, color: Colors.black87),
             ),
-            const SizedBox(height: 32),
+            SizedBox(height: 32),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16.0),
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: const [
+                children: [
                   WeatherColumn(
                     day: 'Minggu',
                     icon: Icons.sunny,

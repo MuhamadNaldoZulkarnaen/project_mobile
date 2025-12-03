@@ -24,7 +24,8 @@ if (flutterVersionName == null) {
 
 android {
     namespace "com.example.praktikum_mobile"
-    compileSdkVersion flutter.compileSdkVersion
+    // plugins require a higher compile SDK; set to 34
+    compileSdkVersion 34
     ndkVersion flutter.ndkVersion
 
     compileOptions {
@@ -44,8 +45,9 @@ android {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId "com.example.praktikum_mobile"
         // You can update the following values to match your application needs.
-        // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-gradle-build-configuration.
-        minSdkVersion flutter.minSdkVersion
+    // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-gradle-build-configuration.
+    // google_maps_flutter_android requires minSdkVersion >= 20
+    minSdkVersion 20
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
